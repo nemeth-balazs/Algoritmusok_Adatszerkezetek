@@ -29,10 +29,8 @@ Ez a metódus a bemeneti paraméterek érvényességét ellenőrzi:
 A Calculate() függvény célja, hogy a gyerekek számához viszonyítva a lehető legkevesebb fordulót használja az óriáskeréken. Ehhez rendezést és egy "oszd meg és uralkodj" alapú keresési algoritmust alkalmaz, hogy optimálisan párosítsa a gyerekeket.
 
 **Működési elv:**  
-1. Rendezés: 
-
-   - A gyerekek súlyát tartalmazó listát növekvő sorrendbe rendezi, így a legnehezebb gyerekek a lista végén lesznek, megkönnyítve az optimális párosítást.
-
+1. Rendezés:
+   A gyerekek súlyát tartalmazó listát növekvő sorrendbe rendezi, így a legnehezebb gyerekek a lista végén lesznek, megkönnyítve az optimális párosítást.
 2. Iteratív feldolgozás és párosítás:
    - Minden iterációban a legnehezebb gyereket (nWeightOfActualChild) leválasztja a listáról.
    - Ezután a fennmaradó gyerekek listájában rekurzív keresést végez (findBestFitRecursive függvény), hogy megtalálja azt a legnehezebb gyereket, aki még belefér az adott kapacitásba az aktuálisan kiválasztott gyerek mellé.
@@ -40,7 +38,6 @@ A Calculate() függvény célja, hogy a gyerekek számához viszonyítva a lehet
 3. Fordulószámláló frissítése:
    - Minden fülke indításával növeli a nCounter változót, ami a szükséges fordulók számát jelöli.
    - A folyamat addig ismétlődik, amíg minden gyerek sorra nem kerül.
-
 4. Végső eredmény:  
 A Calculate() függvény visszaadja a nCounter értékét, amely a minimális fordulók számát jelenti az adott beállítások mellett.
 
