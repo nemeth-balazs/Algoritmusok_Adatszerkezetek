@@ -31,7 +31,6 @@ A Calculate() függvény dinamikus programozást alkalmaz annak érdekében, hog
 **Működési elv:**  
 1. 2D tömb inicializálása:   
 A pages egy olyan táblázat, amely mérete [numberOfBook + 1][totalMoney + 1], ahol pages[i][j] az elérhető maximális oldalszámot jelöli az első i könyv felhasználásával és j költségvetéssel.
-
 2. Iteratív számítás:  
    - Minden könyv esetében (numberOfBookToChoice) ellenőrzi az összes lehetséges költségvetési értéket (priceIndex).
    - Aktuális könyv nélküli eset: Kezdetben pages[numberOfBookToChoice][priceIndex] az előző maximális oldalszámot örökli az aktuális könyv nélkül (pages[numberOfBookToChoice-1][priceIndex]).
@@ -44,6 +43,7 @@ A végső válasz a pages[-1][-1] pozícióban található, amely az összes kö
 
 
 **Összefoglalás**   
+
 A Calculate() metódus dinamikus programozást alkalmaz, hatékonyan kiszámítva a költségvetésen belül elérhető maximális oldalszámot az előzőleg kiszámított eredmények felhasználásával. Ez az eljárás biztosítja, hogy a megoldás optimális és hatékony legyen, különösen akkor, ha sok könyv és nagy költségvetés áll rendelkezésre.
 
 ## Tesztelés: ##
@@ -57,9 +57,7 @@ A tesztelés célja a BookShop osztály Calculate() függvényének helyes műk�
 
 1. Fájlbeolvasás:
 
-
-   - Az input mappa fájljait egyenként feldolgozza. Minden fájl egy tesztesetet képvisel, ahol az első sor a könyvek számát és a teljes költségvetést, a második sor a könyvek árait, a harmadik pedig az oldalszámokat tartalmazza.  
-
+- Az input mappa fájljait egyenként feldolgozza. Minden fájl egy tesztesetet képvisel, ahol az első sor a könyvek számát és a teljes költségvetést, a második sor a könyvek árait, a harmadik pedig az oldalszámokat tartalmazza.  
 
 3. Objektum Létrehozása és Ellenőrzése:
 
